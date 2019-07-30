@@ -1,18 +1,19 @@
 class PrimeNumbers:
-    def __init__(self, first, second):
-        self.first = first
+    def __init__(self, second):
         self.second = second
 
-    def __next__(self):
-        result = self.first
-        for i in range(self.first, self.second):
-            for j in range(2, i):
-                if i % j == 0:
-                    break
-                else:
-                    print(i)
-                    
+    def checkprimenumber(self,n):
+        for i in range(2,n):
+            if n%i==0:
+                return False
+        return True
+
     def __iter__(self):
-        return self
-                     
-PrimeNumbers(2, 100)
+        yield 2
+        if self.second>2:
+            for n in range(2,self.second):
+                if self.checkprimenumber(n):
+                    yield n
+                    
+for n in PrimeNumbers(100):
+        print(n)
