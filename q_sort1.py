@@ -1,5 +1,4 @@
 import random
-from random import randint
 
 def q_sort(mass):
     if len(mass) <= 1:
@@ -21,7 +20,7 @@ def q_sort(mass):
 n = 15
 pikabu = []
 for i in range(n):
-    pikabu.append(randint(1, 99))
+    pikabu.append(random.randint(1, 99))
 print(pikabu)
 print("--------------------------------------")
 print(q_sort(pikabu))
