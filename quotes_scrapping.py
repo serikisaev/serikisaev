@@ -11,7 +11,6 @@ for quote in quotes:
                quote.find(class_='keywords')['content']]
     quote_list.append(quote_1)
 
-
 with open ('quotes.csv', 'w') as file:
     csv_writer = csv.writer(file)
     csv_writer.writerow(['Text', 'Author', 'Keywords'])
