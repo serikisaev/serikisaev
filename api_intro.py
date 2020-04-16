@@ -17,6 +17,7 @@ response = requests.get(url, headers={'Accept': 'application/json'}, params={
     'longitude': longtitude,
     'maxradiuskm': maxradius,
     'minmagnitude': minmagnitude
+    
     # 'format': 'geojson',
     # 'starttime': '2001-01-01',
     # 'endtime': '2020-01-01',
