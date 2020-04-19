@@ -13,22 +13,15 @@ questions_list = [
     ('5 * 3 = 15', 'T')
 ]
 
+random.shuffle(questions_list)
 
-def unsorted_list(temp_list):
-    count = len(temp_list)
-    uns_list = []
-    while len(temp_list) != 0:
-        count -= 1
-        uns_list.append(temp_list.pop(random.randint(0, count)))
-    return uns_list
 
 def line():
-    my_list = unsorted_list(questions_list)
-    count = len(my_list)
+    count = len(questions_list)
     score = 0
     start_time = time.perf_counter()
     while count != 0:
-        x = my_list.pop(0)
+        x = questions_list.pop(0)
 
         answer = input('Правильно ли утверждение что ' + x[0] + '\nОтвет в формате F или T: ')
         if answer == x[1]:
@@ -42,6 +35,7 @@ def line():
 
     print('\n\n\nОчкодранов набрал: ' + str(score))
     print('Выполнил тест за: ' + str(ready_time) + ' секындыф')
+
 
 if __name__ == '__main__':
     line()
